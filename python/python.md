@@ -1,3 +1,4 @@
+- install python
 - run:
 ```shell
 python webserver.py
