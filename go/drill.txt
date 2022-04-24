@@ -15,7 +15,7 @@ Time taken for tests      3.2 seconds
 Total requests            100000
 Successful requests       100000
 Failed requests           0
-Requests per second       31247.61 [#/sec]
+Requests per second       31572.05 [#/sec]
 Median time per request   12ms
 Average time per request  12ms
 Sample standard deviation 8ms
@@ -31,13 +31,13 @@ Fetch base                Successful requests       100000
 Fetch base                Failed requests           0
 Fetch base                Median time per request   25ms
 Fetch base                Average time per request  27ms
-Fetch base                Sample standard deviation 21ms
+Fetch base                Sample standard deviation 22ms
 
-Time taken for tests      3.3 seconds
+Time taken for tests      3.4 seconds
 Total requests            100000
 Successful requests       100000
 Failed requests           0
-Requests per second       30271.51 [#/sec]
+Requests per second       29375.31 [#/sec]
 Median time per request   25ms
 Average time per request  27ms
-Sample standard deviation 21ms
+Sample standard deviation 22ms
