@@ -12,7 +12,7 @@ const server = http.createServer((req, res) => {
 });
 
 const host = "localhost";
-const port = 8080;
+const port = 80;
 
 if (cluster.isMaster) {
     console.log(`Master ${process.pid} is running`);
