@@ -1,14 +1,10 @@
 const http = require("http");
-const fs = require("fs").promises;
 const cluster = require("cluster");
 const numCPUs = require("os").cpus().length;
 
-let count = 0;
-
 // set router
 const server = http.createServer((req, res) => {
-    count++;
-    requestListener(req, res, count);
+    requestListener(req, res);
 });
 
 const host = "localhost";
@@ -34,21 +30,8 @@ if (cluster.isMaster) {
     });
 }
 
-const requestListener = async function (req, res, count) {
-    // add 2 second delay to every 10th request
-    if (count % 10 === 0) {
-        console.log("Adding delay. Count: ", count);
-        await sleep(2000);
-    }
-    const contents = "hello world"; // read html file
+const requestListener = async function (req, res) {
     res.setHeader("Connection", "keep-alive");
     res.writeHead(200); // 200 OK
-    res.end(contents); // send data to client side
+    res.end("Hello"); // send data to client side
 };
-
-// sleep function since NodeJS doesn't provide one
-function sleep(ms) {
-    return new Promise((resolve) => {
-        setTimeout(resolve, ms);
-    });
-}
