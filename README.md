@@ -15,3 +15,23 @@ drill --benchmark benchmark-1000.yml --stats -q > rust/drill.txt
 "====================================================" >> rust/drill.txt
 drill --benchmark benchmark-2000.yml --stats -q >> rust/drill.txt
 ```
+
+whole thing on linux (set dir first): 
+```shell
+dir="
+```
+
+```shell
+echo "filler" > $dir/ab.txt
+echo "filler" > $dir/drill.txt
+echo "filler" > $dir/wrk.txt
+ab -n 10000 -c 100 localhost/ > $dir/ab.txt
+echo "====================================================" >> $dir/ab.txt
+ab -n 10000 -c 200 localhost/ >> $dir/ab.txt
+drill --benchmark benchmark-1000.yml --stats -q > $dir/drill.txt
+echo "====================================================" >> $dir/drill.txt
+drill --benchmark benchmark-2000.yml --stats -q >> $dir/drill.txt
+wrk -t8 -c500 -d30s http://localhost > $dir/wrk.txt
+```
+
+
