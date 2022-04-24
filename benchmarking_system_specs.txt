@@ -1,0 +1,4 @@
+OS: Fedora Linux 35 (Workstation Edition) 64-bit
+RAM: 31.2 GiB
+Processor: Intel® Core™ i7-8665U CPU @ 1.90GHz × 8
+
