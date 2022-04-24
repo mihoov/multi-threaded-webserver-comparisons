@@ -6,7 +6,7 @@ public class webserver {
     public static void main(String[] args) {
         // bind listener
         try (var serverSocket = new ServerSocket(80, 100)) {
-            System.out.println("Server is listening on port 8080");
+            System.out.println("Server is listening on port 80");
             while (true) {
                 // listen to all incoming requests and spawn each connection in a new thread
                 new ServerThread(serverSocket.accept()).start();

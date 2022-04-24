@@ -4,5 +4,14 @@
 - extract zip; run executable `Apache24/bin/ab` 
 - specific command I use, for the go code:  
 ```shell
-.\ab -n 5000 -c 500 localhost/
+.\ab -n 10000 -c 100 localhost/ > go/ab.txt
+"====================================================" >> go/ab.txt
+.\ab -n 10000 -c 200 localhost/ >> go/ab.txt
+```
+
+- for drill: 
+```shell
+drill --benchmark benchmark-1000.yml --stats -q > rust/drill.txt
+"====================================================" >> rust/drill.txt
+drill --benchmark benchmark-2000.yml --stats -q >> rust/drill.txt
 ```
