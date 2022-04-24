@@ -1,0 +1,43 @@
+Concurrency 1000
+Iterations 100000
+Rampup 2
+Base URL http://localhost:80
+
+
+Fetch base                Total requests            100000
+Fetch base                Successful requests       96998
+Fetch base                Failed requests           3002
+Fetch base                Median time per request   2ms
+Fetch base                Average time per request  406ms
+Fetch base                Sample standard deviation 1820ms
+
+Time taken for tests      44.9 seconds
+Total requests            100000
+Successful requests       96998
+Failed requests           3002
+Requests per second       2225.07 [#/sec]
+Median time per request   2ms
+Average time per request  406ms
+Sample standard deviation 1820ms
+====================================================
+Concurrency 2000
+Iterations 100000
+Rampup 2
+Base URL http://localhost:80
+
+
+Fetch base                Total requests            100000
+Fetch base                Successful requests       93289
+Fetch base                Failed requests           6711
+Fetch base                Median time per request   3ms
+Fetch base                Average time per request  815ms
+Fetch base                Sample standard deviation 2601ms
+
+Time taken for tests      48.8 seconds
+Total requests            100000
+Successful requests       93289
+Failed requests           6711
+Requests per second       2051.01 [#/sec]
+Median time per request   3ms
+Average time per request  815ms
+Sample standard deviation 2601ms
