@@ -22,9 +22,6 @@ dir="
 ```
 
 ```shell
-echo "filler" > $dir/ab.txt
-echo "filler" > $dir/drill.txt
-echo "filler" > $dir/wrk.txt
 ab -n 10000 -c 100 localhost/ > $dir/ab.txt
 echo "====================================================" >> $dir/ab.txt
 ab -n 10000 -c 200 localhost/ >> $dir/ab.txt
